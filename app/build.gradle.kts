@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "ru.valentinzadorozhniy.m1_hello_kitty"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "ru.valentinzadorozhniy.m1_hello_kitty"
