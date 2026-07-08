@@ -15,8 +15,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val helloTextView: TextView = findViewById(R.id.textView)
         val imageButton: ImageButton = findViewById(R.id.imageButton)
+        val editTextView: TextView = findViewById(R.id.editTextView)
         imageButton.setOnClickListener {
-            helloTextView.text = "Hello Kitty";
+            if(editTextView.text.isEmpty()){
+                helloTextView.text = "Hello Kitty";
+            } else {
+                helloTextView.text = "Привет, " + editTextView.text
+            }
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
