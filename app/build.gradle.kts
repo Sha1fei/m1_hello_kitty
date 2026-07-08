@@ -28,6 +28,16 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
+afterEvaluate {
+    tasks.named("packageDebug").configure {
+        val apkDir = layout.buildDirectory.dir("outputs/apk/debug").get().asFile
+        doLast {
+            apkDir.listFiles()?.filter { it.name.endsWith(".apk") }?.forEach { apk ->
+                apk.renameTo(File(apk.parentFile, "HelloKitty.apk"))
+            }
+        }
+    }
+}
 
 dependencies {
     implementation(libs.androidx.activity.ktx)
