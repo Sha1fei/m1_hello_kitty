@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
+        android:width="600px"
         android:ems="10"
         android:hint="Как зовут твоего котика?"
         android:inputType="text"
