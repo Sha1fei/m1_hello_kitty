@@ -10,16 +10,14 @@ APK будет в `app/build/outputs/apk/debug/HelloKitty.apk`
 
 ## Установка
 
-**На эмулятор или телефон по USB:**
 ```bash
 adb install -r app/build/outputs/apk/debug/HelloKitty.apk
 ```
 
-**Скачать с GitHub:**
-```
-https://github.com/Sha1fei/m1_hello_kitty/raw/main/app/build/outputs/apk/debug/HelloKitty.apk
-```
+## Состав проекта
 
-## Запуск в Android Studio
-
-Открыть проект → нажать зелёный треугольник ▶
+- **`MainActivity.kt`** — главный экран: поле ввода имени кота, кнопка с изображением Hello Kitty и приветственный текст
+- **`activity_main.xml`** — разметка: `EditText` (ввод имени), `ImageButton` (кнопка с картинкой), `TextView` (вывод приветствия)
+- **`pinkhellokitty.jpg`** — изображение для кнопки
+- **`build.gradle.kts`** — конфигурация сборки (compileSdk 37, targetSdk 36)
+- **`AndroidManifest.xml`** — манифест приложения
