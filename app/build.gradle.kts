@@ -33,7 +33,7 @@ afterEvaluate {
         val apkDir = layout.buildDirectory.dir("outputs/apk/debug").get().asFile
         doLast {
             apkDir.listFiles()?.filter { it.name.endsWith(".apk") }?.forEach { apk ->
-                apk.renameTo(File(apk.parentFile, "HelloKitty.apk"))
+                apk.renameTo(File(apk.parentFile, "hello_kitty.apk"))
             }
         }
     }
